@@ -5,8 +5,8 @@ public class Product {
 	private String name;
 	private double price;
 
-	// methods
-	public void init(String n, double p) {
+	// constructor
+	public Product(String n, double p) {
 		name = n;
 		price = p;
 	}
