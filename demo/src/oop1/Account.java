@@ -7,28 +7,34 @@ public class Account {
 	private double balance;
 
 	// Constructor
-	public Account(long no, String name) {
-		acno = no;
-		ahname = name;
+	public Account(long acno, String ahname) {
+		this.acno = acno;
+		this.ahname = ahname;
 	}
 
-	// 	Methods 
+	public Account(long acno, String ahname, double balance) {
+		this.acno = acno;
+		this.ahname = ahname;
+		this.balance = balance;
+	}
+
+	// Methods
 	public void deposit(double amount) {
-		balance += amount;
+		this.balance += amount;
 	}
 
 	public void withdraw(double amount) {
-		balance -= amount;
+		this.balance -= amount;
 	}
 
 	public double getBalance() {
-		return balance;
+		return this.balance;
 	}
 
 	public void print() {
-		System.out.println(acno);
-		System.out.println(ahname);
-		System.out.println(balance);
+		System.out.println(this.acno);
+		System.out.println(this.ahname);
+		System.out.println(this.balance);
 	}
 
 }

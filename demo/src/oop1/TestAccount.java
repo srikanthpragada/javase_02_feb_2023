@@ -10,7 +10,9 @@ public class TestAccount {
 		 a1.print();
 		 
 		 Account a2 = new Account(2, "Larry"); 
+		 a2.print();
 		 
+		 new Account()
 	}
 
 }

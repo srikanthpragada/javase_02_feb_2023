@@ -12,8 +12,8 @@ public class Product {
 	}
 
 	public void print() {
-		System.out.println(name);
-		System.out.println(price);
+		System.out.println(this.name);
+		System.out.println(this.price);
 		System.out.println(getNetPrice());
 	}
 	
