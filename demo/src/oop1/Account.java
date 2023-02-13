@@ -13,8 +13,7 @@ public class Account {
 	}
 
 	public Account(long acno, String ahname, double balance) {
-		this.acno = acno;
-		this.ahname = ahname;
+		this(acno,ahname); // call another constructor 
 		this.balance = balance;
 	}
 

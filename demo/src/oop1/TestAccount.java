@@ -12,7 +12,6 @@ public class TestAccount {
 		 Account a2 = new Account(2, "Larry"); 
 		 a2.print();
 		 
-		 new Account()
 	}
 
 }

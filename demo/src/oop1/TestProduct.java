@@ -10,6 +10,9 @@ public class TestProduct {
 		 p1.print(); 
 		 
 		 System.out.println(p1.getNetPrice());
+		 
+		 System.out.println(Product.getTaxrate());
+		 
 	}
 
 }
