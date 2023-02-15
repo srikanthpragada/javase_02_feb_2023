@@ -23,7 +23,8 @@ class Employee extends Person {
 		this.job = job;
 		this.company = company;
 	}
-    // Overriding 
+    
+	@Override 
 	public void print() {
 		super.print();
 		System.out.println(this.job);
@@ -34,9 +35,12 @@ class Employee extends Person {
 public class TestPerson {
 
 	public static void main(String[] args) {
-		Employee e = new Employee("Ellison", "ellison@oracle.com", "CEO", "Oracle");
-		e.print();
-
+		Person p = new Employee("Ellison", "ellison@oracle.com", "CEO", "Oracle"); // upcasting 
+		//p = new Person("abc", "abc@gmail.com");
+		if(p instanceof Employee) {
+		 Employee e = (Employee) p;  // downcasting
+		 
+		}
 	}
 
 }
