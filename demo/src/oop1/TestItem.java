@@ -1,6 +1,6 @@
 package oop1;
 
-class Item {
+abstract class Item {
 	protected String name;
 	protected int price;
 	public Item(String name, int price) {
@@ -14,9 +14,8 @@ class Item {
 		System.out.println(this.price);
 	}
 	
-	public int getNetPrice() {
-		return this.price;
-	}
+	public abstract int getNetPrice();
+		 
 }
 
 class DiscountedItem extends Item  {
@@ -33,7 +32,6 @@ class DiscountedItem extends Item  {
 	public int getNetPrice() {
 		return  this.price - (this.price * this.discountRate / 100);
 	}
-	
 }
 
 class ImportedItem extends Item  {
@@ -55,8 +53,8 @@ class ImportedItem extends Item  {
 public class TestItem {
 	public static void main(String[] args) {
 		  Item item = new DiscountedItem("Segate HD",10000,20);
-		  item.print(); 
-		  System.out.println(item.getNetPrice());
+		  item.print();  // RP
+		  System.out.println(item.getNetPrice()); // RP
 		  
 		  item = new ImportedItem("iPhone 14 Pro",100000, 15);
 		  item.print();
