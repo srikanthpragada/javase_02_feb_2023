@@ -9,6 +9,11 @@ class Course {
 		this.title = title;
 		this.fee = fee;
 	}
+	
+	@Override 
+	public int hashCode() {
+		return this.fee; 
+	}
 
 	@Override
 	public String toString() {
@@ -35,6 +40,9 @@ public class TestCourse {
 		System.out.println(c1.equals(c2));
 		System.out.println(c1.equals(c3));
 		System.out.println(c1.equals("abc"));
+		
+		System.out.println(c1.hashCode());
+		System.out.println(c3.hashCode());
 
 	}
 
