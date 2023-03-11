@@ -13,6 +13,9 @@ public class Product {
 
 	// constructor
 	public Product(String n, double p) {
+		if (p < 0)
+			throw new IllegalArgumentException("Invalid Price");
+		
 		this.name = n;
 		price = p;
 	}
